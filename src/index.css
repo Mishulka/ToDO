@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  border: unset;
+  outline: none;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.txt-green {
+  color: #00cd6b;
+}
+
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(129, 129, 129, 0.146);
+  padding: 25px;
+}
+
+.todos-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todos-title {
+  font-weight: 700;
+  text-align: center;
+}
+.todos-input-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.todos-input-block > input {
+  background: transparent;
+  font-size: 16px;
+}
+
+.todos-create-btn {
+  background: #00cd6aac;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s background;
+}
+
+.todos-create-btn:hover {
+  background: #00cd6b;
+}
+.todos__filter {
+  display: flex;
+  gap: 20px;
+}
+.todos__filter_current {
+  position: relative;
+  color: #00cd6b;
+}
+.todos-body {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.todos__filter_current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #00cd6b;
+  height: 2px;
+  left: 0;
+  top: 100%;
+}
+.todo__item {
+  background: #ddf6d6;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  color: #034b28;
+  font-size: 14px;
+}
+.todo__check_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  border-radius: 6px;
+  height: 26px;
+  cursor: pointer;
+  transition: .3s background;
+}
+
+.todo__not_done {
+  background: rgba(0, 205, 106, 0.2);
+}
+.todo__is_done {
+  background: #00cd6b;
+}
+
+.todo__check_block:hover {
+  background: #00cd6b;
+}
+.todo__btns {
+  display: flex;
+  align-items: center;
+  gap: 16px
+}
+.todos__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+.todo__delete {
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+}
+.todo__delete:hover .delete-top {
+  transform: translateY(-6px) translateX(4px) rotateZ(20deg);
+}
+
+.delete-top {
+  position: absolute;
+  transition: .3s transform;
+}
+
