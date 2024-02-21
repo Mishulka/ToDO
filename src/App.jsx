@@ -12,7 +12,6 @@ const PlusIcon = ({ width, height }) => {
   )
 }
 
-
 export const TickIcon = ({ width, height }) => {
   return (
     <svg width={width} height={height} viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
