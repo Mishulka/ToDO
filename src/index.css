@@ -110,9 +110,10 @@ input {
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  color: #034b28;
+  color: #121212;
   font-size: 14px;
 }
+
 .todo__check_block {
   display: flex;
   justify-content: center;
@@ -125,15 +126,18 @@ input {
 }
 
 .todo__not_done {
-  background: rgba(0, 205, 106, 0.2);
+  background: rgba(109, 109, 109, 0.218);
 }
+
 .todo__is_done {
   background: #00cd6b;
 }
 
-.todo__check_block:hover {
-  background: #00cd6b;
+.todo__not_done:hover {
+  background: rgb(124, 120, 214);
 }
+
+
 .todo__btns {
   display: flex;
   align-items: center;
@@ -156,5 +160,9 @@ input {
 .delete-top {
   position: absolute;
   transition: .3s transform;
+}
+
+.todo-blue {
+  background: rgb(209, 209, 249);
 }
 

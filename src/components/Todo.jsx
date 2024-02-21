@@ -1,9 +1,9 @@
 import React from 'react'
 import { TickIcon } from '../App'
 
-export const Todo = ({ title, is_done }) => {
+export const Todo = ({ title, is_done, }) => {
     return (
-        <div className="todo__item">
+        <div className={`todo__item ${!is_done ? "todo-blue" : ""}`}>
             <p style={{ textDecoration: is_done ? "line-through" : "unset" }}>{title}</p>
             <div className="todo__btns">
                 <div className={`todo__check_block ${is_done ? "todo__is_done" : "todo__not_done"}`}>

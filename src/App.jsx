@@ -12,6 +12,7 @@ const PlusIcon = ({ width, height }) => {
   )
 }
 
+
 export const TickIcon = ({ width, height }) => {
   return (
     <svg width={width} height={height} viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,23 +26,22 @@ export const TickIcon = ({ width, height }) => {
 export default function App() {
   const [newTodo, setNewTodo] = useState("")
   const [todos, setTodos] = useState([
-    {
-      is_done: false,
-      title: "Купить машину"
-    },
-    {
-      is_done: false,
-      title: "Сходить за хлебом"
-    },
-    {
-      is_done: true,
-      title: "Вынести мусор"
-    }
+    
   ])
+
+  
   
 
   const createTodo = () => {
-    alert("Создание")
+
+    setTodos((prev) => {
+      return [...prev, {
+        title: newTodo,
+        is_done: false
+      }]
+
+    },)
+
   }
   const deleteTodo = () => {
     alert("Удаление")
